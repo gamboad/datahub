@@ -147,6 +147,15 @@ function EntityDropdown(props: Props) {
             <Dropdown
                 overlay={
                     <Menu>
+                        <Menu.Item key="0">
+                            <MenuItem
+                                onClick={() => {
+                                    alert('Hola');
+                                }}
+                            >
+                                <LinkOutlined /> &nbsp; Access configuration
+                            </MenuItem>
+                        </Menu.Item>
                         {menuItems.has(EntityMenuItems.COPY_URL) && navigator.clipboard && (
                             <Menu.Item key="0">
                                 <MenuItem

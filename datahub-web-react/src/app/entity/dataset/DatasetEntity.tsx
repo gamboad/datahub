@@ -29,6 +29,7 @@ import { DatasetStatsSummarySubHeader } from './profile/stats/stats/DatasetStats
 import { DatasetSearchSnippet } from './DatasetSearchSnippet';
 import { EmbedTab } from '../shared/tabs/Embed/EmbedTab';
 import EmbeddedProfile from '../shared/embed/EmbeddedProfile';
+import { EntityActionItem } from '../shared/entity/EntityActions';
 
 const SUBTYPES = {
     VIEW: 'view',
@@ -86,7 +87,17 @@ export class DatasetEntity implements Entity<Dataset> {
             useEntityQuery={useGetDatasetQuery}
             useUpdateQuery={useUpdateDatasetMutation}
             getOverrideProperties={this.getOverridePropertiesFromEntity}
-            headerDropdownItems={new Set([EntityMenuItems.UPDATE_DEPRECATION])}
+            headerActionItems={new Set([EntityActionItem.BATCH_ADD_DOMAIN, EntityActionItem.BATCH_ADD_GLOSSARY_TERM])}
+            headerDropdownItems={
+                new Set([
+                    EntityMenuItems.UPDATE_DEPRECATION,
+                    EntityMenuItems.ADD_TERM,
+                    EntityMenuItems.ADD_TERM_GROUP,
+                    EntityMenuItems.COPY_URL,
+                    EntityMenuItems.DELETE,
+                    EntityMenuItems.MOVE,
+                ])
+            }
             subHeader={{
                 component: DatasetStatsSummarySubHeader,
             }}

@@ -295,6 +295,8 @@ export const EntityProfile = <T, U>({
     const isLineageEnabled = entityRegistry.getLineageEntityTypes().includes(entityType);
     const showBrowseBar = isBrowsable || isLineageEnabled;
 
+    console.log('headerDropdownItems', headerDropdownItems);
+
     return (
         <EntityContext.Provider
             value={{
@@ -348,6 +350,7 @@ export const EntityProfile = <T, U>({
                                 <HeaderAndTabs>
                                     <HeaderAndTabsFlex>
                                         <Header>
+                                            Aqui esta pasando
                                             <EntityHeader
                                                 headerDropdownItems={headerDropdownItems}
                                                 headerActionItems={headerActionItems}

@@ -68,6 +68,7 @@ export const EntityPage = ({ entityType }: Props) => {
         entityType === EntityType.GlossaryTerm ||
         entityType === EntityType.GlossaryNode;
 
+    console.log('entityType', entityType);
     return (
         <>
             {loading && <Message type="loading" content="Loading..." style={{ marginTop: '10%' }} />}

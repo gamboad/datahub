@@ -16,7 +16,7 @@ import { DocumentationTab } from '../shared/tabs/Documentation/DocumentationTab'
 import { SidebarAboutSection } from '../shared/containers/profile/sidebar/AboutSection/SidebarAboutSection';
 import GlossaryEntitiesPath from '../../glossary/GlossaryEntitiesPath';
 import { EntityMenuItems } from '../shared/EntityDropdown/EntityDropdown';
-import { EntityActionItem } from '../shared/entity/EntityActions';
+// import { EntityActionItem } from '../shared/entity/EntityActions';
 import { SidebarDomainSection } from '../shared/containers/profile/sidebar/Domain/SidebarDomainSection';
 
 /**
@@ -64,7 +64,6 @@ export class GlossaryTermEntity implements Entity<GlossaryTerm> {
                 urn={urn}
                 entityType={EntityType.GlossaryTerm}
                 useEntityQuery={useGetGlossaryTermQuery as any}
-                headerActionItems={new Set([EntityActionItem.BATCH_ADD_GLOSSARY_TERM])}
                 headerDropdownItems={
                     new Set([EntityMenuItems.UPDATE_DEPRECATION, EntityMenuItems.MOVE, EntityMenuItems.DELETE])
                 }
